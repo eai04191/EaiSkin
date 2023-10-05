@@ -6,8 +6,10 @@
 
 以下の既存プロジェクトを大いに参考にしています
 
--   https://github.com/excln/Formula24k
--   https://twitter.com/Azuruff/status/1311461871308869632
+- Formula24k
+  - https://github.com/excln/Formula24k
+- BeatPop
+  - https://twitter.com/Azuruff/status/1311461871308869632
 
 ## License
 

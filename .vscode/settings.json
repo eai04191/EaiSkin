@@ -1,3 +1,6 @@
 {
-    "Lua.diagnostics.globals": ["skin_config"]
+    "Lua.diagnostics.globals": ["skin_config"],
+    "[markdown]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
