@@ -1,0 +1,419 @@
+-- https://github.com/exch-bms2/beatoraja/blob/30334785eb982959c1611c8eb18956fd76f089d4/src/bms/player/beatoraja/skin/json/BeatorajaJsonSkin.java
+
+---@class BeatorajaJsonSkin.Skin
+---@field public type number
+---@field public name string
+---@field public w number | nil
+---@field public h number | nil
+---@field public fadeout number
+---@field public input number
+---@field public scene number
+---@field public close number
+---@field public playstart number
+---@field public judgetimer number | nil
+---@field public finishmargin number | nil
+---@field public category BeatorajaJsonSkin.Category[] | nil
+---@field public property BeatorajaJsonSkin.Property[] | nil
+---@field public filepath BeatorajaJsonSkin.Filepath[] | nil
+---@field public offset BeatorajaJsonSkin.Offset[] | nil
+---@field public source BeatorajaJsonSkin.Source[] | nil
+---@field public font BeatorajaJsonSkin.Font[] | nil
+---@field public image BeatorajaJsonSkin.Image[] | nil
+---@field public imageset BeatorajaJsonSkin.ImageSet[] | nil
+---@field public value BeatorajaJsonSkin.Value[] | nil
+---@field public text BeatorajaJsonSkin.Text[] | nil
+---@field public slider BeatorajaJsonSkin.Slider[] | nil
+---@field public graph BeatorajaJsonSkin.Graph[] | nil
+---@field public gaugegraph BeatorajaJsonSkin.GaugeGraph[] | nil
+---@field public judgegraph BeatorajaJsonSkin.JudgeGraph[] | nil
+---@field public bpmgraph BeatorajaJsonSkin.BPMGraph[] | nil
+---@field public timingvisualizer BeatorajaJsonSkin.TimingVisualizer[] | nil
+---@field public timingdistributiongraph BeatorajaJsonSkin.TimingDistributionGraph[] | nil
+---@field public note BeatorajaJsonSkin.NoteSet | nil
+---@field public gauge BeatorajaJsonSkin.Gauge | nil
+---@field public hiddenCover BeatorajaJsonSkin.HiddenCover[] | nil
+---@field public bga BeatorajaJsonSkin.BGA | nil
+---@field public judge BeatorajaJsonSkin.Judge[] | nil
+---@field public songlist BeatorajaJsonSkin.SongList | nil
+---@field public pmchara BeatorajaJsonSkin.PMchara[] | nil
+---@field public skinSelect BeatorajaJsonSkin.SkinConfigurationProperty | nil
+---@field public customEvents BeatorajaJsonSkin.CustomEvent[] | nil
+---@field public customTimers BeatorajaJsonSkin.CustomTimer[] | nil
+---@field public destination BeatorajaJsonSkin.Destination[] | nil
+
+---@class BeatorajaJsonSkin.Property
+---@field public category string
+---@field public name string
+---@field public item BeatorajaJsonSkin.PropertyItem[] | nil
+---@field public def string
+
+---@class BeatorajaJsonSkin.PropertyItem
+---@field public name string
+---@field public op number
+
+---@class BeatorajaJsonSkin.Filepath
+---@field public category string
+---@field public name string
+---@field public path string
+---@field public def string
+
+---@class BeatorajaJsonSkin.Offset
+---@field public category string
+---@field public name string
+---@field public id number
+---@field public x boolean
+---@field public y boolean
+---@field public w boolean
+---@field public h boolean
+---@field public r boolean
+---@field public a boolean
+
+---@class BeatorajaJsonSkin.Category
+---@field public name string
+---@field public item string[] | nil
+
+---@class BeatorajaJsonSkin.Source
+---@field public id string
+---@field public path string
+
+---@class BeatorajaJsonSkin.Font
+---@field public id string
+---@field public path string
+---@field public type number
+
+---@class BeatorajaJsonSkin.Image
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number
+---@field public len number
+---@field public ref number
+---@field public act BeatorajaJsonSkin.Property.Event | nil
+---@field public click number | nil
+
+---@class BeatorajaJsonSkin.ImageSet
+---@field public id string
+---@field public ref number
+---@field public value BeatorajaJsonSkin.Property.IntegerProperty | nil
+---@field public images string[] | nil
+---@field public act BeatorajaJsonSkin.Property.Event | nil
+---@field public click number | nil
+
+---@class BeatorajaJsonSkin.Value
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number
+---@field public align number
+---@field public digit number
+---@field public padding number
+---@field public zeropadding number
+---@field public space number
+---@field public ref number
+---@field public value BeatorajaJsonSkin.Property.IntegerProperty | nil
+---@field public offset BeatorajaJsonSkin.Value[]
+
+---@class BeatorajaJsonSkin.Text
+---@field public id string
+---@field public font string
+---@field public size number
+---@field public align number
+---@field public ref number
+---@field public value BeatorajaJsonSkin.Property.StringProperty | nil
+---@field public constantText string | nil
+---@field public wrapping boolean | nil
+---@field public overflow number | nil
+---@field public outlineColor string | nil
+---@field public outlineWidth number | nil
+---@field public shadowColor string | nil
+---@field public shadowOffsetX number | nil
+---@field public shadowOffsetY number | nil
+---@field public shadowSmoothness number | nil
+
+---@class BeatorajaJsonSkin.Slider
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number | nil
+---@field public angle number
+---@field public range number
+---@field public type number
+---@field public changeable boolean | nil
+---@field public value BeatorajaJsonSkin.Property.FloatProperty | nil
+---@field public event BeatorajaJsonSkin.Property.FloatWriter | nil
+---@field public isRefNum boolean | nil
+---@field public min number | nil
+---@field public max number | nil
+
+---@class BeatorajaJsonSkin.Graph
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number
+---@field public angle number | nil
+---@field public type number
+---@field public value BeatorajaJsonSkin.Property.FloatProperty | nil
+---@field public isRefNum boolean
+---@field public min number | nil
+---@field public max number | nil
+
+---@class BeatorajaJsonSkin.GaugeGraph
+---@field public id string
+---@field public color string[]
+---@field public assistClearBGColor string | nil
+---@field public assistAndEasyFailBGColor string | nil
+---@field public grooveFailBGColor string | nil
+---@field public grooveClearAndHardBGColor string | nil
+---@field public exHardBGColor string | nil
+---@field public hazardBGColor string | nil
+---@field public assistClearLineColor string | nil
+---@field public assistAndEasyFailLineColor string | nil
+---@field public grooveFailLineColor string | nil
+---@field public grooveClearAndHardLineColor string | nil
+---@field public exHardLineColor string | nil
+---@field public hazardLineColor string | nil
+---@field public borderlineColor string | nil
+---@field public borderColor string | nil
+
+---@class BeatorajaJsonSkin.JudgeGraph
+---@field public id string
+---@field public type number
+---@field public backTexOff number | nil
+---@field public delay number | nil
+---@field public orderReverse number | nil
+---@field public noGap number | nil
+
+---@class BeatorajaJsonSkin.BPMGraph
+---@field public id string
+---@field public delay number | nil
+---@field public lineWidth number | nil
+---@field public mainBPMColor string | nil
+---@field public minBPMColor string | nil
+---@field public maxBPMColor string | nil
+---@field public otherBPMColor string | nil
+---@field public stopLineColor string | nil
+---@field public transitionLineColor string | nil
+
+---@class BeatorajaJsonSkin.HitErrorVisualizer
+---@field public id string
+---@field public width number | nil
+---@field public judgeWidthMillis number | nil
+---@field public lineWidth number | nil
+---@field public colorMode number | nil
+---@field public hiterrorMode number | nil
+---@field public emaMode number | nil
+---@field public lineColor string | nil
+---@field public centerColor string | nil
+---@field public PGColor string | nil
+---@field public GRColor string | nil
+---@field public GDColor string | nil
+---@field public BDColor string | nil
+---@field public PRColor string | nil
+---@field public emaColor string | nil
+---@field public alpha number | nil
+---@field public windowLength number | nil
+---@field public transparent number | nil
+---@field public drawDecay number | nil
+
+---@class BeatorajaJsonSkin.TimingVisualizer
+---@field public id string
+---@field public width number | nil
+---@field public judgeWidthMillis number | nil
+---@field public lineWidth number | nil
+---@field public lineColor string | nil
+---@field public centerColor string | nil
+---@field public PGColor string | nil
+---@field public GRColor string | nil
+---@field public GDColor string | nil
+---@field public BDColor string | nil
+---@field public PRColor string | nil
+---@field public transparent number | nil
+---@field public drawDecay number | nil
+
+---@class BeatorajaJsonSkin.TimingDistributionGraph
+---@field public id string
+---@field public width number | nil
+---@field public lineWidth number | nil
+---@field public graphColor string | nil
+---@field public averageColor string | nil
+---@field public devColor string | nil
+---@field public PGColor string | nil
+---@field public GRColor string | nil
+---@field public GDColor string | nil
+---@field public BDColor string | nil
+---@field public PRColor string | nil
+---@field public drawAverage number | nil
+---@field public drawDev number | nil
+
+---@class BeatorajaJsonSkin.NoteSet
+---@field public id string
+---@field public note string[] | nil
+---@field public lnstart string[] | nil
+---@field public lnend string[] | nil
+---@field public lnbody string[] | nil
+---@field public lnbodyActive string[] | nil
+---@field public lnactive string[] | nil
+---@field public hcnstart string[] | nil
+---@field public hcnend string[] | nil
+---@field public hcnbody string[] | nil
+---@field public hcnactive string[] | nil
+---@field public hcnbodyActive string[] | nil
+---@field public hcndamage string[] | nil
+---@field public hcnbodyMiss string[] | nil
+---@field public hcnreactive string[] | nil
+---@field public hcnbodyReactive string[] | nil
+---@field public mine string[] | nil
+---@field public hidden string[] | nil
+---@field public processed string[] | nil
+---@field public dst BeatorajaJsonSkin.Animation[] | nil
+---@field public dst2 number | nil
+---@field public expansionrate number[] | nil
+---@field public size number[] | nil
+---@field public group BeatorajaJsonSkin.Destination[] | nil
+---@field public bpm BeatorajaJsonSkin.Destination[] | nil
+---@field public stop BeatorajaJsonSkin.Destination[] | nil
+---@field public time BeatorajaJsonSkin.Destination[] | nil
+
+---@class BeatorajaJsonSkin.Gauge
+---@field public id string
+---@field public nodes string[]
+---@field public parts number | nil
+---@field public type number
+---@field public range number | nil
+---@field public cycle number | nil
+---@field public starttime number | nil
+---@field public endtime number | nil
+
+---@class BeatorajaJsonSkin.HiddenCover
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number
+---@field public disapearLine number | nil
+---@field public isDisapearLineLinkLift boolean | nil
+
+---@class BeatorajaJsonSkin.LiftCover
+---@field public id string
+---@field public src string
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+---@field public divx number | nil
+---@field public divy number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public cycle number
+---@field public disapearLine number | nil
+---@field public isDisapearLineLinkLift boolean | nil
+
+---@class BeatorajaJsonSkin.BGA
+---@field public id string
+
+---@class BeatorajaJsonSkin.Judge
+---@field public id string
+---@field public index number
+---@field public images BeatorajaJsonSkin.Destination[] | nil
+---@field public numbers BeatorajaJsonSkin.Destination[] | nil
+---@field public shift boolean
+
+---@class BeatorajaJsonSkin.SongList
+---@field public id string
+---@field public center number
+---@field public clickable number[] | nil
+---@field public listoff BeatorajaJsonSkin.Destination[] | nil
+---@field public liston BeatorajaJsonSkin.Destination[] | nil
+---@field public text BeatorajaJsonSkin.Destination[] | nil
+---@field public level BeatorajaJsonSkin.Destination[] | nil
+---@field public lamp BeatorajaJsonSkin.Destination[] | nil
+---@field public playerlamp BeatorajaJsonSkin.Destination[] | nil
+---@field public rivallamp BeatorajaJsonSkin.Destination[] | nil
+---@field public trophy BeatorajaJsonSkin.Destination[] | nil
+---@field public label BeatorajaJsonSkin.Destination[] | nil
+---@field public graph BeatorajaJsonSkin.Destination
+
+---@class BeatorajaJsonSkin.Destination
+---@field public id string
+---@field public blend number | nil
+---@field public filter number | nil
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil
+---@field public loop number | nil
+---@field public center number | nil
+---@field public offset number | nil
+---@field public offsets number[] | nil
+---@field public stretch number | nil
+---@field public op number[] | nil
+---@field public draw BeatorajaJsonSkin.Property.BooleanProperty | nil
+---@field public dst BeatorajaJsonSkin.Animation[] | nil
+---@field public mouseRect BeatorajaJsonSkin.Rect | nil
+
+---@class BeatorajaJsonSkin.Rect
+---@field public x number
+---@field public y number
+---@field public w number
+---@field public h number
+
+---@class BeatorajaJsonSkin.Animation
+---@field public time number | nil
+---@field public x number | nil
+---@field public y number | nil
+---@field public w number | nil
+---@field public h number | nil
+---@field public acc number | nil
+---@field public a number | nil
+---@field public r number | nil
+---@field public g number | nil
+---@field public b number | nil
+---@field public angle number | nil
+
+---@class BeatorajaJsonSkin.PMchara
+---@field public id string
+---@field public src string
+---@field public color number | nil
+---@field public type number | nil
+---@field public side number | nil
+
+---@class BeatorajaJsonSkin.SkinConfigurationProperty
+---@field public customBMS string[]
+---@field public defaultCategory number | nil
+---@field public customPropertyCount number | nil
+---@field public customOffsetStyle number | nil
+
+---@class BeatorajaJsonSkin.CustomEvent
+---@field public id number
+---@field public action BeatorajaJsonSkin.Property.Event | nil
+---@field public condition BeatorajaJsonSkin.Property.BooleanProperty | nil
+---@field public minInterval number
+
+---@class BeatorajaJsonSkin.CustomTimer
+---@field public id number
+---@field public timer BeatorajaJsonSkin.Property.TimerProperty | nil

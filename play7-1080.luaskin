@@ -1,0 +1,10 @@
+local constans = require("lua/constants")
+local t = require("lua/play7main")
+
+Resolution = constans.RESOLUTION.FHD
+
+if skin_config then
+    return t.main()
+else
+    return t.header
+end
