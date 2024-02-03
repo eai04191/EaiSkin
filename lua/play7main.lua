@@ -4,6 +4,7 @@ local constans = require("lua/constants")
 local header = {
     type = constans.SKIN_TYPE.PLAY_7KEYS,
     name = "EaiSkin 7k " .. Resolution.name,
+    author = "Eai",
     w = Resolution.width,
     h = Resolution.height,
     fadeout = 1000,

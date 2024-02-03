@@ -1,8 +1,9 @@
--- https://github.com/exch-bms2/beatoraja/blob/30334785eb982959c1611c8eb18956fd76f089d4/src/bms/player/beatoraja/skin/json/BeatorajaJsonSkin.java
+-- https://github.com/exch-bms2/beatoraja/blob/aa4b6ecd5ba11d403a44eaf808d7c3864bff7a70/src/bms/player/beatoraja/skin/json/JsonSkin.java
 
 ---@class BeatorajaJsonSkin.Skin
 ---@field public type number
 ---@field public name string
+---@field public author string
 ---@field public w number | nil
 ---@field public h number | nil
 ---@field public fadeout number
